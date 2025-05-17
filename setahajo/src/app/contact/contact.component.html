@@ -1,0 +1,11 @@
+<<form [formGroup]="contactForm" (ngSubmit)="send()">
+    <mat-form-field appearance="fill">
+      <mat-label>Név</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Üzenet</mat-label>
+      <textarea matInput formControlName="message"></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="accent">Küldés</button>
+</form>

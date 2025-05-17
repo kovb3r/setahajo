@@ -1,0 +1,15 @@
+<form [formGroup]="bookingForm" (ngSubmit)="submit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Név</mat-label>
+      <input matInput formControlName="customerName">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Vendégek száma</mat-label>
+      <input type="number" matInput formControlName="guests">
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary">Küldés</button>
+</form>

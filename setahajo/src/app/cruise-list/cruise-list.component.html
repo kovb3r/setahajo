@@ -1,0 +1,6 @@
+<mat-card *ngFor="let cruise of cruises" (click)="onSelect(cruise)">
+    <mat-card-title>{{ cruise.name }}</mat-card-title>
+    <mat-card-subtitle>{{ cruise.date | date:'short' }}</mat-card-subtitle>
+    <mat-card-content>{{ cruise.description }}</mat-card-content>
+    <button mat-raised-button color="accent">Részletek</button>
+</mat-card>

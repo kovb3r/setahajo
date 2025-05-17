@@ -1,0 +1,16 @@
+<table mat-table [dataSource]="bookings">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Név</th>
+      <td mat-cell *matCellDef="let booking">{{ booking.customerName }}</td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let booking">{{ booking.email }}</td>
+    </ng-container>
+    <ng-container matColumnDef="guests">
+      <th mat-header-cell *matHeaderCellDef>Vendégek</th>
+      <td mat-cell *matCellDef="let booking">{{ booking.guests }}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="['name','email','guests']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['name','email','guests']"></tr>
+</table>

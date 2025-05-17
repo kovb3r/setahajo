@@ -1,0 +1,10 @@
+<mat-expansion-panel *ngIf="cruise">
+    <mat-expansion-panel-header>
+      <mat-panel-title>{{ cruise.name }}</mat-panel-title>
+      <mat-panel-description>{{ cruise.date | date }}</mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>{{ cruise.description }}</p>
+    <p>Időtartam: {{ cruise.durationHours }} óra</p>
+    <p>Ár: {{ cruise.price }} Ft</p>
+    <button mat-raised-button color="primary" (click)="book.emit()">Foglalás</button>
+</mat-expansion-panel>
